@@ -1,99 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" style="background:#fdf8ff; color:#8878a8; color-scheme:light;">
+<html lang="en" style="background:#fdf8ff;">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🌸 catnobboptob Farm — Hosting Guide</title>
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="light only">
+<title>catnobboptob Farm — Hosting Guide</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Pacifico&display=swap" rel="stylesheet">
 <style>
-  :root {
-    color-scheme: light;
-    --blue:      #b8d4f0;
-    --pink:      #f5bcd4;
-    --blue-l:    #daeeff;
-    --pink-l:    #fde8f2;
-    --mid:       #d8c4e8;
-    --grad:      linear-gradient(160deg, #b8d4f0, #f5bcd4);
-    --grad-v:    linear-gradient(to bottom, #b8d4f0, #f5bcd4);
-    --text:      #8878a8;
-    --text-soft: #b0a0c8;
-    --white:     #ffffff;
-    --shadow:    rgba(180, 160, 210, 0.15);
-  }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html {
-    background: #fdf8ff !important;
-    color-scheme: light !important;
-  }
-
-  body {
-    background: #fdf8ff !important;
+  html, body {
+    background: #fdf8ff;
+    color: #8878a8;
     font-family: 'Nunito', sans-serif;
     font-size: 15px;
     line-height: 1.85;
-    color: #8878a8 !important;
     padding: 0 0 80px;
   }
 
   /* ══════════════════════
-     HERO HEADER
+     HERO
   ══════════════════════ */
   .hero {
-    background: var(--grad);
+    background: #b8d4f0;
+    background: linear-gradient(160deg, #b8d4f0 0%, #d4c4e4 50%, #f5bcd4 100%);
     padding: 52px 30px 44px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
   }
-  /* floating circles in hero */
-  .hero::before {
-    content: '';
-    position: absolute;
-    width: 220px; height: 220px;
-    background: rgba(255,255,255,0.15);
-    border-radius: 50%;
-    top: -60px; left: -60px;
+  .hero-icons {
+    font-size: 30px;
+    margin-bottom: 12px;
+    letter-spacing: 6px;
   }
-  .hero::after {
-    content: '';
-    position: absolute;
-    width: 160px; height: 160px;
-    background: rgba(255,255,255,0.12);
-    border-radius: 50%;
-    bottom: -40px; right: -30px;
-  }
-  .hero-icons { font-size: 30px; margin-bottom: 12px; letter-spacing: 6px; position: relative; z-index: 1; }
   .hero h1 {
     font-family: 'Pacifico', cursive;
     font-size: 30px;
-    color: #fff;
-    text-shadow: 0 2px 16px rgba(160,130,200,0.3);
+    color: #ffffff;
     margin-bottom: 8px;
-    position: relative; z-index: 1;
   }
   .hero-sub {
-    color: rgba(255,255,255,0.88);
+    color: #ffffff;
     font-size: 14.5px;
     font-style: italic;
-    position: relative; z-index: 1;
   }
   .hero-tags {
-    display: flex; flex-wrap: wrap; gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     justify-content: center;
     margin-top: 18px;
-    position: relative; z-index: 1;
   }
   .hero-tag {
-    background: rgba(255,255,255,0.35);
-    border: 1.5px solid rgba(255,255,255,0.5);
+    background: #ffffff;
+    border: 1.5px solid #ffffff;
     border-radius: 999px;
     padding: 4px 14px;
     font-size: 12.5px;
     font-weight: 700;
-    color: #fff;
+    color: #a898c8;
   }
 
   /* ══════════════════════
@@ -102,7 +66,7 @@
   .page {
     max-width: 660px;
     margin: 0 auto;
-    padding: 32px 22px 0;
+    padding: 28px 22px 0;
   }
 
   /* ══════════════════════
@@ -118,30 +82,34 @@
     align-items: flex-start;
     line-height: 1.7;
   }
-  .notice-pink {
-    background: var(--pink-l);
-    border: 1.5px solid var(--pink);
-  }
   .notice-blue {
-    background: var(--blue-l);
-    border: 1.5px solid var(--blue);
+    background: #daeeff;
+    border: 1.5px solid #b8d4f0;
+  }
+  .notice-pink {
+    background: #fde8f2;
+    border: 1.5px solid #f5bcd4;
+  }
+  .notice-lavender {
+    background: #f0e8ff;
+    border: 1.5px solid #d8c8ee;
   }
   .notice-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
-  .notice strong { color: var(--text); }
+  .notice strong { color: #8878a8; }
 
   /* ══════════════════════
      SECTION CARDS
   ══════════════════════ */
   .card {
-    background: var(--white);
+    background: #ffffff;
     border-radius: 20px;
     margin-bottom: 16px;
-    box-shadow: 0 4px 20px var(--shadow);
+    border: 1.5px solid #ddd0ee;
     overflow: hidden;
-    border: 1.5px solid rgba(200,190,230,0.3);
   }
   .card-header {
-    background: var(--grad);
+    background: #b8d4f0;
+    background: linear-gradient(160deg, #b8d4f0 0%, #d4c4e4 50%, #f5bcd4 100%);
     padding: 13px 20px;
     display: flex;
     align-items: center;
@@ -151,8 +119,7 @@
   .card-header h2 {
     font-size: 15.5px;
     font-weight: 800;
-    color: #fff;
-    text-shadow: 0 1px 4px rgba(160,130,200,0.25);
+    color: #ffffff;
   }
   .card-body { padding: 20px 22px; }
 
@@ -168,18 +135,17 @@
   .step:last-child { margin-bottom: 0; }
   .step-num {
     flex-shrink: 0;
-    width: 30px; height: 30px;
-    background: var(--grad-v);
+    width: 30px;
+    height: 30px;
+    background: #c8c4e8;
     border-radius: 50%;
-    color: #fff;
+    color: #ffffff;
     font-weight: 800;
     font-size: 13.5px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2px;
-    box-shadow: 0 2px 8px rgba(180,160,220,0.3);
-    flex-shrink: 0;
   }
   .step-content { flex: 1; }
   .step-content p { font-size: 14.5px; margin-bottom: 5px; }
@@ -191,20 +157,20 @@
   code {
     font-family: 'Courier New', monospace;
     font-size: 12.5px;
-    background: var(--blue-l);
-    border: 1px solid var(--blue);
+    background: #e8f4ff;
+    border: 1px solid #b8d4f0;
     border-radius: 6px;
     padding: 1px 7px;
-    color: #8898c8;
+    color: #7898c8;
     font-weight: 700;
     word-break: break-all;
   }
   .path-block {
     font-family: 'Courier New', monospace;
     font-size: 12.5px;
-    background: var(--blue-l);
-    color: #8898c8;
-    border: 1.5px solid var(--blue);
+    background: #e8f4ff;
+    color: #7898c8;
+    border: 1.5px solid #b8d4f0;
     border-radius: 10px;
     padding: 10px 14px;
     margin: 7px 0 3px;
@@ -213,8 +179,8 @@
     font-weight: 700;
   }
   kbd {
-    background: var(--pink-l);
-    border: 1.5px solid var(--pink);
+    background: #fde8f2;
+    border: 1.5px solid #f5bcd4;
     border-bottom-width: 3px;
     border-radius: 6px;
     padding: 1px 8px;
@@ -229,21 +195,23 @@
   ══════════════════════ */
   .who-grid { display: flex; flex-direction: column; gap: 9px; }
   .who-row {
-    display: flex; gap: 11px; align-items: center;
-    background: linear-gradient(135deg, var(--blue-l), var(--pink-l));
-    border: 1.5px solid rgba(200,190,230,0.4);
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    background: #f5eeff;
+    border: 1.5px solid #ddd0ee;
     border-radius: 12px;
     padding: 10px 14px;
     font-size: 14px;
     font-weight: 600;
-    color: var(--text);
+    color: #8878a8;
   }
   .who-chip {
     flex-shrink: 0;
     font-size: 10.5px;
     font-weight: 800;
-    background: var(--grad);
-    color: #fff;
+    background: #c8c4e8;
+    color: #ffffff;
     border-radius: 8px;
     padding: 3px 11px;
     letter-spacing: 0.5px;
@@ -256,7 +224,7 @@
   ══════════════════════ */
   .divider {
     border: none;
-    border-top: 2px dashed rgba(200,190,230,0.5);
+    border-top: 2px dashed #ddd0ee;
     margin: 14px 0;
   }
 
@@ -265,13 +233,13 @@
   ══════════════════════ */
   .tip {
     font-size: 13.5px;
-    color: var(--text-soft);
+    color: #b0a0c8;
     font-style: italic;
     margin-top: 10px;
     padding: 9px 13px;
-    background: linear-gradient(135deg, var(--blue-l), var(--pink-l));
+    background: #f5eeff;
+    border: 1px solid #ddd0ee;
     border-radius: 10px;
-    border: 1px solid rgba(200,190,230,0.4);
     display: flex;
     gap: 8px;
     align-items: flex-start;
@@ -282,28 +250,31 @@
      ZIP BOX
   ══════════════════════ */
   .zip-box {
-    background: linear-gradient(135deg, var(--blue-l), var(--pink-l));
-    border: 1.5px solid rgba(200,190,230,0.4);
+    background: #fde8f2;
+    border: 1.5px solid #f5bcd4;
     border-radius: 13px;
     padding: 14px 16px;
     margin-top: 10px;
   }
   .zip-title {
     font-weight: 800;
-    color: var(--text);
+    color: #8878a8;
     margin-bottom: 9px;
     font-size: 14px;
-    display: flex; gap: 6px; align-items: center;
+    display: flex;
+    gap: 6px;
+    align-items: center;
   }
   .zip-step {
-    display: flex; gap: 9px;
+    display: flex;
+    gap: 9px;
     margin-bottom: 6px;
     font-size: 14px;
     align-items: flex-start;
-    color: var(--text);
+    color: #8878a8;
   }
   .zip-step:last-child { margin-bottom: 0; }
-  .zip-bullet { flex-shrink: 0; font-weight: 800; color: #b8a0cc; }
+  .zip-bullet { flex-shrink: 0; font-weight: 800; color: #a898c8; }
 
   /* ══════════════════════
      LOAD BOXES
@@ -314,52 +285,38 @@
     margin-top: 10px;
     font-size: 14.5px;
     font-weight: 600;
-    display: flex; gap: 10px; align-items: flex-start;
-    color: var(--text);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: #8878a8;
     line-height: 1.7;
   }
-  .load-blue { background: var(--blue-l); border: 1.5px solid var(--blue); }
-  .load-pink { background: var(--pink-l); border: 1.5px solid var(--pink); }
+  .load-blue { background: #daeeff; border: 1.5px solid #b8d4f0; }
+  .load-pink { background: #fde8f2; border: 1.5px solid #f5bcd4; }
   .load-icon { font-size: 19px; flex-shrink: 0; }
 
   /* ══════════════════════
      DECO + FOOTER
   ══════════════════════ */
-  .deco { text-align: center; font-size: 18px; letter-spacing: 7px; margin: 14px 0; opacity: 0.6; }
+  .deco {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 7px;
+    margin: 14px 0;
+    color: #c8b8d8;
+  }
   .footer {
     text-align: center;
     margin-top: 28px;
-    color: var(--text-soft);
+    color: #b0a0c8;
     font-style: italic;
     font-size: 13.5px;
-    display: flex; flex-direction: column; align-items: center; gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
   }
   .footer-deco { font-size: 20px; letter-spacing: 6px; }
-
-  @media (prefers-color-scheme: dark) {
-    html, body { background: #fdf8ff !important; color: #8878a8 !important; }
-    .hero { background: linear-gradient(160deg, #b8d4f0, #f5bcd4) !important; }
-    .card { background: #ffffff !important; border-color: rgba(200,190,230,0.3) !important; }
-    .card-header { background: linear-gradient(160deg, #b8d4f0, #f5bcd4) !important; }
-    .card-header h2 { color: #fff !important; }
-    .notice-blue { background: #daeeff !important; border-color: #b8d4f0 !important; }
-    .notice-pink { background: #fde8f2 !important; border-color: #f5bcd4 !important; }
-    .step-num { background: linear-gradient(to bottom, #b8d4f0, #f5bcd4) !important; color: #fff !important; }
-    .who-row { background: linear-gradient(135deg, #daeeff, #fde8f2) !important; color: #8878a8 !important; border-color: rgba(200,190,230,0.4) !important; }
-    .who-chip { background: linear-gradient(160deg, #b8d4f0, #f5bcd4) !important; color: #fff !important; }
-    .tip { background: linear-gradient(135deg, #daeeff, #fde8f2) !important; border-color: rgba(200,190,230,0.4) !important; color: #b0a0c8 !important; }
-    .zip-box { background: linear-gradient(135deg, #daeeff, #fde8f2) !important; border-color: rgba(200,190,230,0.4) !important; }
-    .zip-step { color: #8878a8 !important; }
-    .load-blue { background: #daeeff !important; border-color: #b8d4f0 !important; color: #8878a8 !important; }
-    .load-pink { background: #fde8f2 !important; border-color: #f5bcd4 !important; color: #8878a8 !important; }
-    .path-block { background: #daeeff !important; border-color: #b8d4f0 !important; color: #8898c8 !important; }
-    code { background: #daeeff !important; border-color: #b8d4f0 !important; color: #8898c8 !important; }
-    kbd { background: #fde8f2 !important; border-color: #f5bcd4 !important; color: #c898b8 !important; }
-    .page { background: transparent !important; }
-    .hero-tag { background: rgba(255,255,255,0.35) !important; color: #fff !important; }
-    .footer { color: #b0a0c8 !important; }
-    p, li, div { color: inherit; }
-  }
 </style>
 </head>
 <body>
@@ -403,7 +360,7 @@
       <hr class="divider">
       <div class="who-grid">
         <div class="who-row"><span class="who-chip">🎀 host</span> Runs the swap (or asks Wendy), zips the save, uploads to Discord, loads the farm and invites everyone</div>
-        <div class="who-row"><span class="who-chip">🌸 everyone</span> Downloads the zip from Discord, extracts it, puts it in the right folder, then joins the host</div>
+        <div class="who-row"><span class="who-chip">🌸 everyone</span> Downloads the zip from our saves channel on Discord, extracts it, puts it in the right folder, then joins the host</div>
       </div>
     </div>
   </div>
@@ -416,8 +373,8 @@
     </div>
     <div class="card-body">
       <div class="step"><div class="step-num">1</div><div class="step-content"><p>Message Wendy and tell her who's hosting today! 💌</p></div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-content"><p>Wendy runs the swap tool, zips the save folder, and uploads it to Discord.</p></div></div>
-      <div class="step"><div class="step-num">3</div><div class="step-content"><p>Everyone downloads the <code>.zip</code> from Discord — see <strong>Installing the Save File</strong> below.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><p>Wendy runs the swap tool, zips the save folder, and uploads it to our saves channel on Discord.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><p>Everyone downloads the <code>.zip</code> — see <strong>Installing the Save File</strong> below.</p></div></div>
       <div class="step"><div class="step-num">4</div><div class="step-content"><p>Host opens Stardew and invites everyone. Have fun!! 🌾🌸</p></div></div>
     </div>
   </div>
@@ -444,7 +401,7 @@
             <div class="zip-step"><span class="zip-bullet">➊</span><span>Press <kbd>Win + R</kbd>, type <code>%AppData%\StardewValley\Saves</code>, press <kbd>Enter</kbd></span></div>
             <div class="zip-step"><span class="zip-bullet">➋</span><span>Right-click the <code>catnobboptob_438842613</code> folder</span></div>
             <div class="zip-step"><span class="zip-bullet">➌</span><span><strong>Windows 11:</strong> Compress to ZIP file &nbsp;·&nbsp; <strong>Windows 10:</strong> Send to → Compressed folder</span></div>
-            <div class="zip-step"><span class="zip-bullet">➍</span><span>Drag the new <code>.zip</code> into Discord and send! 💌</span></div>
+            <div class="zip-step"><span class="zip-bullet">➍</span><span>Drag the new <code>.zip</code> into our saves channel on Discord and send! 💌</span></div>
           </div>
         </div>
       </div>
@@ -458,7 +415,7 @@
       <h2>Installing the save file — everyone does this!</h2>
     </div>
     <div class="card-body">
-      <div class="step"><div class="step-num">1</div><div class="step-content"><p>Download the <code>.zip</code> file from Discord.</p></div></div>
+      <div class="step"><div class="step-num">1</div><div class="step-content"><p>Download the <code>.zip</code> file from our saves channel on Discord.</p></div></div>
       <div class="step"><div class="step-num">2</div><div class="step-content"><p>Right-click the <code>.zip</code> → <strong>Extract All</strong> → click <strong>Extract</strong>. A folder will appear! ✨</p></div></div>
       <div class="step">
         <div class="step-num">3</div>
@@ -499,7 +456,7 @@
       <h2>Installing Python — only if you're running the swap tool</h2>
     </div>
     <div class="card-body">
-      <div class="notice notice-blue" style="margin-bottom:14px;">
+      <div class="notice notice-lavender" style="margin-bottom:14px;">
         <span class="notice-icon">💜</span>
         <div><strong>Who needs this?</strong> Only the person doing the swap when Wendy is asleep. If Wendy always does it, skip this section entirely!</div>
       </div>
