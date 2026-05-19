@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" style="background:#fdf8ff; color:#8878a8; color-scheme:light;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌸 catnobboptob Farm — Hosting Guide</title>
+<meta name="color-scheme" content="light">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --blue:      #b8d4f0;
+    --pink:      #f5bcd4;
+    --blue-l:    #daeeff;
+    --pink-l:    #fde8f2;
+    --mid:       #d8c4e8;
+    --grad:      linear-gradient(160deg, #b8d4f0, #f5bcd4);
+    --grad-v:    linear-gradient(to bottom, #b8d4f0, #f5bcd4);
+    --text:      #8878a8;
+    --text-soft: #b0a0c8;
+    --white:     #ffffff;
+    --shadow:    rgba(180, 160, 210, 0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    background: #fdf8ff !important;
+    color-scheme: light !important;
+  }
+
+  body {
+    background: #fdf8ff !important;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    line-height: 1.85;
+    color: #8878a8 !important;
+    padding: 0 0 80px;
+  }
+
+  /* ══════════════════════
+     HERO HEADER
+  ══════════════════════ */
+  .hero {
+    background: var(--grad);
+    padding: 52px 30px 44px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  /* floating circles in hero */
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 220px; height: 220px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    top: -60px; left: -60px;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    width: 160px; height: 160px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 50%;
+    bottom: -40px; right: -30px;
+  }
+  .hero-icons { font-size: 30px; margin-bottom: 12px; letter-spacing: 6px; position: relative; z-index: 1; }
+  .hero h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 0 2px 16px rgba(160,130,200,0.3);
+    margin-bottom: 8px;
+    position: relative; z-index: 1;
+  }
+  .hero-sub {
+    color: rgba(255,255,255,0.88);
+    font-size: 14.5px;
+    font-style: italic;
+    position: relative; z-index: 1;
+  }
+  .hero-tags {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    justify-content: center;
+    margin-top: 18px;
+    position: relative; z-index: 1;
+  }
+  .hero-tag {
+    background: rgba(255,255,255,0.35);
+    border: 1.5px solid rgba(255,255,255,0.5);
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  /* ══════════════════════
+     PAGE BODY
+  ══════════════════════ */
+  .page {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 32px 22px 0;
+  }
+
+  /* ══════════════════════
+     NOTICE BOXES
+  ══════════════════════ */
+  .notice {
+    border-radius: 16px;
+    padding: 13px 16px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    display: flex;
+    gap: 11px;
+    align-items: flex-start;
+    line-height: 1.7;
+  }
+  .notice-pink {
+    background: var(--pink-l);
+    border: 1.5px solid var(--pink);
+  }
+  .notice-blue {
+    background: var(--blue-l);
+    border: 1.5px solid var(--blue);
+  }
+  .notice-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+  .notice strong { color: var(--text); }
+
+  /* ══════════════════════
+     SECTION CARDS
+  ══════════════════════ */
+  .card {
+    background: var(--white);
+    border-radius: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px var(--shadow);
+    overflow: hidden;
+    border: 1.5px solid rgba(200,190,230,0.3);
+  }
+  .card-header {
+    background: var(--grad);
+    padding: 13px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .card-icon { font-size: 21px; }
+  .card-header h2 {
+    font-size: 15.5px;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(160,130,200,0.25);
+  }
+  .card-body { padding: 20px 22px; }
+
+  /* ══════════════════════
+     STEPS
+  ══════════════════════ */
+  .step {
+    display: flex;
+    gap: 13px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+  .step:last-child { margin-bottom: 0; }
+  .step-num {
+    flex-shrink: 0;
+    width: 30px; height: 30px;
+    background: var(--grad-v);
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 800;
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    box-shadow: 0 2px 8px rgba(180,160,220,0.3);
+    flex-shrink: 0;
+  }
+  .step-content { flex: 1; }
+  .step-content p { font-size: 14.5px; margin-bottom: 5px; }
+  .step-content p:last-child { margin-bottom: 0; }
+
+  /* ══════════════════════
+     CODE & PATHS
+  ══════════════════════ */
+  code {
+    font-family: 'Courier New', monospace;
+    font-size: 12.5px;
+    background: var(--blue-l);
+    border: 1px solid var(--blue);
+    border-radius: 6px;
+    padding: 1px 7px;
+    color: #8898c8;
+    font-weight: 700;
+    word-break: break-all;
+  }
+  .path-block {
+    font-family: 'Courier New', monospace;
+    font-size: 12.5px;
+    background: var(--blue-l);
+    color: #8898c8;
+    border: 1.5px solid var(--blue);
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin: 7px 0 3px;
+    word-break: break-all;
+    line-height: 1.6;
+    font-weight: 700;
+  }
+  kbd {
+    background: var(--pink-l);
+    border: 1.5px solid var(--pink);
+    border-bottom-width: 3px;
+    border-radius: 6px;
+    padding: 1px 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #c898b8;
+    font-weight: 700;
+  }
+
+  /* ══════════════════════
+     WHO CARDS
+  ══════════════════════ */
+  .who-grid { display: flex; flex-direction: column; gap: 9px; }
+  .who-row {
+    display: flex; gap: 11px; align-items: center;
+    background: linear-gradient(135deg, var(--blue-l), var(--pink-l));
+    border: 1.5px solid rgba(200,190,230,0.4);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .who-chip {
+    flex-shrink: 0;
+    font-size: 10.5px;
+    font-weight: 800;
+    background: var(--grad);
+    color: #fff;
+    border-radius: 8px;
+    padding: 3px 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* ══════════════════════
+     DIVIDER
+  ══════════════════════ */
+  .divider {
+    border: none;
+    border-top: 2px dashed rgba(200,190,230,0.5);
+    margin: 14px 0;
+  }
+
+  /* ══════════════════════
+     TIP
+  ══════════════════════ */
+  .tip {
+    font-size: 13.5px;
+    color: var(--text-soft);
+    font-style: italic;
+    margin-top: 10px;
+    padding: 9px 13px;
+    background: linear-gradient(135deg, var(--blue-l), var(--pink-l));
+    border-radius: 10px;
+    border: 1px solid rgba(200,190,230,0.4);
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    line-height: 1.65;
+  }
+
+  /* ══════════════════════
+     ZIP BOX
+  ══════════════════════ */
+  .zip-box {
+    background: linear-gradient(135deg, var(--blue-l), var(--pink-l));
+    border: 1.5px solid rgba(200,190,230,0.4);
+    border-radius: 13px;
+    padding: 14px 16px;
+    margin-top: 10px;
+  }
+  .zip-title {
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 9px;
+    font-size: 14px;
+    display: flex; gap: 6px; align-items: center;
+  }
+  .zip-step {
+    display: flex; gap: 9px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    align-items: flex-start;
+    color: var(--text);
+  }
+  .zip-step:last-child { margin-bottom: 0; }
+  .zip-bullet { flex-shrink: 0; font-weight: 800; color: #b8a0cc; }
+
+  /* ══════════════════════
+     LOAD BOXES
+  ══════════════════════ */
+  .load-box {
+    border-radius: 12px;
+    padding: 12px 15px;
+    margin-top: 10px;
+    font-size: 14.5px;
+    font-weight: 600;
+    display: flex; gap: 10px; align-items: flex-start;
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .load-blue { background: var(--blue-l); border: 1.5px solid var(--blue); }
+  .load-pink { background: var(--pink-l); border: 1.5px solid var(--pink); }
+  .load-icon { font-size: 19px; flex-shrink: 0; }
+
+  /* ══════════════════════
+     DECO + FOOTER
+  ══════════════════════ */
+  .deco { text-align: center; font-size: 18px; letter-spacing: 7px; margin: 14px 0; opacity: 0.6; }
+  .footer {
+    text-align: center;
+    margin-top: 28px;
+    color: var(--text-soft);
+    font-style: italic;
+    font-size: 13.5px;
+    display: flex; flex-direction: column; align-items: center; gap: 5px;
+  }
+  .footer-deco { font-size: 20px; letter-spacing: 6px; }
+
+  @media (prefers-color-scheme: dark) {
+    html, body { background: #fdf8ff !important; color: #8878a8 !important; }
+    .hero { background: linear-gradient(160deg, #b8d4f0, #f5bcd4) !important; }
+    .card { background: #ffffff !important; border-color: rgba(200,190,230,0.3) !important; }
+    .card-header { background: linear-gradient(160deg, #b8d4f0, #f5bcd4) !important; }
+    .card-header h2 { color: #fff !important; }
+    .notice-blue { background: #daeeff !important; border-color: #b8d4f0 !important; }
+    .notice-pink { background: #fde8f2 !important; border-color: #f5bcd4 !important; }
+    .step-num { background: linear-gradient(to bottom, #b8d4f0, #f5bcd4) !important; color: #fff !important; }
+    .who-row { background: linear-gradient(135deg, #daeeff, #fde8f2) !important; color: #8878a8 !important; border-color: rgba(200,190,230,0.4) !important; }
+    .who-chip { background: linear-gradient(160deg, #b8d4f0, #f5bcd4) !important; color: #fff !important; }
+    .tip { background: linear-gradient(135deg, #daeeff, #fde8f2) !important; border-color: rgba(200,190,230,0.4) !important; color: #b0a0c8 !important; }
+    .zip-box { background: linear-gradient(135deg, #daeeff, #fde8f2) !important; border-color: rgba(200,190,230,0.4) !important; }
+    .zip-step { color: #8878a8 !important; }
+    .load-blue { background: #daeeff !important; border-color: #b8d4f0 !important; color: #8878a8 !important; }
+    .load-pink { background: #fde8f2 !important; border-color: #f5bcd4 !important; color: #8878a8 !important; }
+    .path-block { background: #daeeff !important; border-color: #b8d4f0 !important; color: #8898c8 !important; }
+    code { background: #daeeff !important; border-color: #b8d4f0 !important; color: #8898c8 !important; }
+    kbd { background: #fde8f2 !important; border-color: #f5bcd4 !important; color: #c898b8 !important; }
+    .page { background: transparent !important; }
+    .hero-tag { background: rgba(255,255,255,0.35) !important; color: #fff !important; }
+    .footer { color: #b0a0c8 !important; }
+    p, li, div { color: inherit; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-icons">🌸 🎀 🌸 🎀 🌸</div>
+  <h1>catnobboptob Farm</h1>
+  <div class="hero-sub">~ our co-op hosting guide ~</div>
+  <div class="hero-tags">
+    <span class="hero-tag">🌷 super easy</span>
+    <span class="hero-tag">💜 for the whole crew</span>
+    <span class="hero-tag">✨ no stress</span>
+    <span class="hero-tag">🎀 you got this</span>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="deco">✦ ✦ ✦ ✦ ✦</div>
+
+  <!-- Notices -->
+  <div class="notice notice-blue">
+    <span class="notice-icon">💻</span>
+    <div><strong>Do I need to install anything?</strong> Only the person running the swap tool (usually Wendy) needs Python installed. If you're just downloading the save from Discord and playing, you don't need to install a single thing! 🌸</div>
+  </div>
+
+  <div class="notice notice-pink">
+    <span class="notice-icon">🚨</span>
+    <div><strong>Important!</strong> Make sure Stardew Valley is <strong>fully closed</strong> before swapping saves or starting a session. Always use the save shared in Discord that day — never an old one!</div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">🌟</span>
+      <h2>How it works</h2>
+    </div>
+    <div class="card-body">
+      <p>Stardew saves are tied to Wendy's account. A little swap tool updates the save file so a different person becomes the host for that session. Then everyone grabs the updated file from Discord before playing!</p>
+      <hr class="divider">
+      <div class="who-grid">
+        <div class="who-row"><span class="who-chip">🎀 host</span> Runs the swap (or asks Wendy), zips the save, uploads to Discord, loads the farm and invites everyone</div>
+        <div class="who-row"><span class="who-chip">🌸 everyone</span> Downloads the zip from Discord, extracts it, puts it in the right folder, then joins the host</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WENDY IS AVAILABLE -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">🌙</span>
+      <h2>If Wendy is available</h2>
+    </div>
+    <div class="card-body">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><p>Message Wendy and tell her who's hosting today! 💌</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><p>Wendy runs the swap tool, zips the save folder, and uploads it to Discord.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><p>Everyone downloads the <code>.zip</code> from Discord — see <strong>Installing the Save File</strong> below.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><p>Host opens Stardew and invites everyone. Have fun!! 🌾🌸</p></div></div>
+    </div>
+  </div>
+
+  <!-- WENDY IS NAPPING -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">😴</span>
+      <h2>If Wendy is napping - LEAVE HER ALONE n do it ur fucking self!</h2>
+    </div>
+    <div class="card-body">
+      <p style="margin-bottom:14px;">The host can do the swap themselves! You'll need the two tool files (they're in the saves channel on our discord server) and Python installed — see <strong>Installing Python</strong> at the bottom.</p>
+      <div class="step"><div class="step-num">1</div><div class="step-content"><p>Download the latest save <code>.zip</code> from our saves channel on Discord and install it first — see <strong>Installing the Save File</strong> below.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><p>Open the folder with the tool files and double-click <code>run_host_swap.bat</code>. A window will pop up! 🌸</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><p>It shows a list of saves. Type the number next to <code>catnobboptob</code> and press <kbd>Enter</kbd>.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><p>It shows everyone's names. Type the number next to <strong>your name</strong> and press <kbd>Enter</kbd>.</p></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><p>When it says <strong>Done!</strong> press <kbd>Enter</kbd> to close. ✅</p></div></div>
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <p>Zip the updated save folder and upload it to Discord in our saves channel so everyone can grab it!</p>
+          <div class="zip-box">
+            <div class="zip-title">🗜️ How to zip the save folder</div>
+            <div class="zip-step"><span class="zip-bullet">➊</span><span>Press <kbd>Win + R</kbd>, type <code>%AppData%\StardewValley\Saves</code>, press <kbd>Enter</kbd></span></div>
+            <div class="zip-step"><span class="zip-bullet">➋</span><span>Right-click the <code>catnobboptob_438842613</code> folder</span></div>
+            <div class="zip-step"><span class="zip-bullet">➌</span><span><strong>Windows 11:</strong> Compress to ZIP file &nbsp;·&nbsp; <strong>Windows 10:</strong> Send to → Compressed folder</span></div>
+            <div class="zip-step"><span class="zip-bullet">➍</span><span>Drag the new <code>.zip</code> into Discord and send! 💌</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSTALLING THE SAVE -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">📁</span>
+      <h2>Installing the save file — everyone does this!</h2>
+    </div>
+    <div class="card-body">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><p>Download the <code>.zip</code> file from Discord.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><p>Right-click the <code>.zip</code> → <strong>Extract All</strong> → click <strong>Extract</strong>. A folder will appear! ✨</p></div></div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <p>Open your Stardew saves folder — press <kbd>Win + R</kbd>, paste this, press <kbd>Enter</kbd>:</p>
+          <div class="path-block">%AppData%\StardewValley\Saves</div>
+        </div>
+      </div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><p>Drag the extracted <code>catnobboptob_438842613</code> folder into the Saves window. If asked to replace the old one, click <strong>Yes</strong>.</p></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><p>All done — you're ready to play! 🌸</p></div></div>
+      <div class="tip">💡 If you don't see a Saves folder, just launch Stardew once and it'll create one automatically!</div>
+    </div>
+  </div>
+
+  <!-- LOADING THE GAME -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">🎮</span>
+      <h2>Loading the game</h2>
+    </div>
+    <div class="card-body">
+      <div class="load-box load-blue">
+        <span class="load-icon">👑</span>
+        <div><strong>If you're the host:</strong> Co-op → Host → select catnobboptob farm → start! Then invite everyone from the in-game pause menu.</div>
+      </div>
+      <div class="load-box load-pink">
+        <span class="load-icon">🌸</span>
+        <div><strong>If you're joining:</strong> Co-op → Join → accept the invite from the host. Do not try to host it yourself!</div>
+      </div>
+      <div class="tip" style="margin-top:12px;">🌷 If something looks wrong, quit without saving and let Wendy know. The tool always makes a backup so nothing is ever permanently lost!</div>
+    </div>
+  </div>
+
+  <!-- INSTALLING PYTHON -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">🐍</span>
+      <h2>Installing Python — only if you're running the swap tool</h2>
+    </div>
+    <div class="card-body">
+      <div class="notice notice-blue" style="margin-bottom:14px;">
+        <span class="notice-icon">💜</span>
+        <div><strong>Who needs this?</strong> Only the person doing the swap when Wendy is asleep. If Wendy always does it, skip this section entirely!</div>
+      </div>
+      <p style="margin-bottom:14px;">The easiest way is through the <strong>Microsoft Store</strong> — no confusing websites! 🌸</p>
+      <div class="step"><div class="step-num">1</div><div class="step-content"><p>Press the <kbd>Windows</kbd> key, type <strong>Microsoft Store</strong>, and open it.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><p>Search for <strong>Python Install Manager</strong> in the search bar at the top.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><p>Click the result made by <strong>Python Software Foundation</strong>. It is free — if it asks for money, it's the wrong one! 🚨</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><p>Click <strong>Get</strong>, wait for it to finish, then click <strong>Open</strong>.</p></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><p>A window pops up with setup questions. For each one, type <kbd>y</kbd> and press <kbd>Enter</kbd>. It's safe to say yes to everything!</p></div></div>
+      <div class="step"><div class="step-num">6</div><div class="step-content"><p>When it shows a big list of commands, type <kbd>n</kbd> and press <kbd>Enter</kbd>, then close the window.</p></div></div>
+      <div class="step"><div class="step-num">7</div><div class="step-content"><p><strong>Restart your computer!</strong> Python won't work properly until you do. 💜</p></div></div>
+      <div class="tip">✨ You only ever need to do this once! After restarting, <code>run_host_swap.bat</code> will work whenever you need it.</div>
+    </div>
+  </div>
+
+  <div class="deco">🌸 🌷 💜 🌷 🌸</div>
+  <div class="footer">
+    <span class="footer-deco">✦ ✦ ✦ ✦ ✦</span>
+    <span>made with love for catnobboptob farm 🎀</span>
+  </div>
+
+</div>
+</body>
+</html>
