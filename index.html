@@ -119,7 +119,7 @@
   .card-icon { font-size: 21px; }
   .card-header h2 {
     font-size: 15.5px;
-    font-weight: 800;
+    font-weight: 700;
     color: #ffffff;
   }
   .card-body { padding: 20px 22px; }
@@ -141,7 +141,7 @@
     background: #c8c4e8;
     border-radius: 50%;
     color: #ffffff;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 13.5px;
     display: flex;
     align-items: center;
@@ -180,6 +180,8 @@
     font-weight: 700;
   }
   kbd {
+    display: inline-block;
+    white-space: nowrap;
     background: #fde8f2;
     border: 1.5px solid #f5bcd4;
     border-bottom-width: 3px;
@@ -204,13 +206,13 @@
     border-radius: 12px;
     padding: 10px 14px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     color: #8878a8;
   }
   .who-chip {
     flex-shrink: 0;
     font-size: 10.5px;
-    font-weight: 800;
+    font-weight: 700;
     background: #c8c4e8;
     color: #ffffff;
     border-radius: 8px;
@@ -258,7 +260,7 @@
     margin-top: 10px;
   }
   .zip-title {
-    font-weight: 800;
+    font-weight: 700;
     color: #8878a8;
     margin-bottom: 9px;
     font-size: 14px;
@@ -275,7 +277,7 @@
     color: #8878a8;
   }
   .zip-step:last-child { margin-bottom: 0; }
-  .zip-bullet { flex-shrink: 0; font-weight: 800; color: #a898c8; }
+  .zip-bullet { flex-shrink: 0; font-weight: 700; color: #a898c8; }
 
   /* ══════════════════════
      LOAD BOXES
@@ -285,7 +287,7 @@
     padding: 12px 15px;
     margin-top: 10px;
     font-size: 14.5px;
-    font-weight: 600;
+    font-weight: 700;
     display: flex;
     gap: 10px;
     align-items: flex-start;
@@ -342,7 +344,7 @@
   <!-- Notices -->
   <div class="notice notice-blue">
     <span class="notice-icon">💻</span>
-    <div><strong>Do I need to install anything?</strong> Only the person running the swap tool (usually Wendy) needs Python installed. If you're just downloading the save from Discord and playing, you don't need to install a single thing! 🌸</div>
+    <div><strong>Do I need to install anything?</strong> Please be serious for like two seconds. Y'all already struggled installing the mods I literally prepared for you in advance 😭 You're lucky this setup doesn't need anything extra installed. <img src="data:image/png;base64,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rmBj774+vLthE1557XV893u3Z9rav535+pL2TPt//e+ZH/zwXzI/Ip7uWf6rtqV339f2q8dWtY3s90jXQys80tsDz3vWrd/c/dbmrd1rKVZr1r3VvWbd+u6//ftvqBs/9yV1w2e+pK67+Yvq+lv+vfpux3dv77yrs/vhhx/ufu6557pfeuGF7pdefLH75Vde6V776qtrdvf04FAQZAi3Z7NZlzMFQcMgyB++PtFakCkg/Q/096O3txfbPvzTqH4S/o8vv9z92quvHgS/fea33U88/mT38vtXdC9btqz7n2///u3XXPdZdePNf6X+8gtfVbf93bfUf/nGt9VzL6ztXrP2re633trcvZb4eGv9VvlBW88BlB3f1fES4Ph6Y6unn3/9tpWP/jbzwzvvz3y7418zX/8fP8j843e+n/nH/3Z75lvt373u+//7/7SPhP/7o5+0dy79afudd93t1st+RrVH+NnP722/+577KMor2u+9b+VJw13Lft6+lH3/pHNZ+49/cmf7T+64y63v4L3M6R++3ZEZCf/0w6WZH3T+InPn/Q9n7n/4N5lVT780qurgUk/LcdoJcLRZZYH1L7z2TttIeOal19oe6n6ubfkj3W0rKbb3PPhYm8DdKx9pE/jp8ofaTgXue+iptgefeKbtsWdeaOv+w8ttv6Nqlfqp59Ycl4o42npOx7uPlACnY8JnWh/jBBhjio4TYJwAY4yBMR7+BCRgjGd6hg4/ToAxJuw4AcYJMMYYGOPhxyVgnABjjIExHn5cAsYJMMYYGOPhxyVgnABjjIExHn5cAo5BgD/36/8PAAD//wPC3ZwAAAAGSURBVAMAzrIRdZWcfoYAAAAASUVORK5CYII=" alt="pusheen" style="width:28px;height:28px;vertical-align:middle;margin-left:6px;"></div>
   </div>
 
   <div class="notice notice-pink">
@@ -370,11 +372,11 @@
   <div class="card">
     <div class="card-header">
       <span class="card-icon">🌙</span>
-      <h2>If Wendy is available</h2>
+      <h2>If Wendy is available - ok fine</h2>
     </div>
     <div class="card-body">
       <div class="step"><div class="step-num">1</div><div class="step-content"><p>Message Wendy and tell her who's hosting today! 💌</p></div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-content"><p>Wendy runs the swap tool, zips the save folder, and uploads it to our saves channel on Discord.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><p>Wendy runs the swap tool, zips the save folder, and uploads it to the saves channel on Discord.</p></div></div>
       <div class="step"><div class="step-num">3</div><div class="step-content"><p>Everyone downloads the <code>.zip</code> — see <strong>Installing the Save File</strong> below.</p></div></div>
       <div class="step"><div class="step-num">4</div><div class="step-content"><p>Host opens Stardew and invites everyone. Have fun!! 🌾🌸</p></div></div>
     </div>
@@ -387,12 +389,12 @@
       <h2>If Wendy is napping - LEAVE HER ALONE n do it ur fucking self!</h2>
     </div>
     <div class="card-body">
-      <p style="margin-bottom:14px;">The host can do the swap themselves! You'll need the two tool files (they're in the saves channel on our discord server) and Python installed — see <strong>Installing Python</strong> at the bottom.</p>
+      <p style="margin-bottom:14px;">The host can do the swap themselves! You'll need the two tool files (they're in the saves channel on our discord server).</p>
       <div class="step"><div class="step-num">1</div><div class="step-content"><p>Download the latest save <code>.zip</code> from our saves channel on Discord and install it first — see <strong>Installing the Save File</strong> below.</p></div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-content"><p>Open the folder with the tool files and double-click <code>run_host_swap.bat</code>. A window will pop up! 🌸</p></div></div>
-      <div class="step"><div class="step-num">3</div><div class="step-content"><p>It shows a list of saves. Type the number next to <code>catnobboptob</code> and press <kbd>Enter</kbd>.</p></div></div>
-      <div class="step"><div class="step-num">4</div><div class="step-content"><p>It shows everyone's names. Type the number next to <strong>your name</strong> and press <kbd>Enter</kbd>.</p></div></div>
-      <div class="step"><div class="step-num">5</div><div class="step-content"><p>When it says <strong>Done!</strong> press <kbd>Enter</kbd> to close. ✅</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><p>Put the two tool files inside the <code>catnobboptob_438842613</code> save folder, then double-click <code>Swap-StardewHost.bat</code>. A window will pop up! 🌸</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><p style="white-space:nowrap;">It shows a list of saves. Type the number next to <code>catnobboptob</code> and press <kbd>Enter</kbd>.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><p style="white-space:nowrap;">It shows everyone\'s names. Type the number next to <strong>your name</strong> and press <kbd>Enter</kbd>.</p></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><p>When the host swap completes, you can close the batch window. ✅</p></div></div>
       <div class="step">
         <div class="step-num">6</div>
         <div class="step-content">
@@ -427,7 +429,7 @@
       </div>
       <div class="step"><div class="step-num">4</div><div class="step-content"><p>Drag the extracted <code>catnobboptob_438842613</code> folder into the Saves window. If asked to replace the old one, click <strong>Yes</strong>.</p></div></div>
       <div class="step"><div class="step-num">5</div><div class="step-content"><p>All done — you're ready to play! 🌸</p></div></div>
-      <div class="tip">💡 If you don't see a Saves folder, just launch Stardew once and it'll create one automatically!</div>
+      
     </div>
   </div>
 
@@ -440,44 +442,24 @@
     <div class="card-body">
       <div class="load-box load-blue">
         <span class="load-icon">👑</span>
-        <div><strong>If you're the host:</strong> Co-op → Host → select catnobboptob farm → start! Then invite everyone from the in-game pause menu.</div>
+        <div><span style='font-weight:600;'>If you're the host:</span> Co-op → Host → select catnobboptob farm → start! Then send everyone the invite code from the in-game pause menu.</div>
       </div>
       <div class="load-box load-pink">
         <span class="load-icon">🌸</span>
-        <div><strong>If you're joining:</strong> Co-op → Join → accept the invite from the host. Do not try to host it yourself!</div>
+        <div><span style='font-weight:600;'>If you're joining:</span> Co-op → Join → enter the invite code from the host. Do not try to host it yourself!</div>
       </div>
       <div class="tip" style="margin-top:12px;">🌷 If something looks wrong, quit without saving and let Wendy know. The tool always makes a backup so nothing is ever permanently lost!</div>
     </div>
   </div>
 
-  <!-- INSTALLING PYTHON -->
-  <div class="card">
-    <div class="card-header">
-      <span class="card-icon">🐍</span>
-      <h2>Installing Python — only if you're running the swap tool</h2>
-    </div>
-    <div class="card-body">
-      <div class="notice notice-lavender" style="margin-bottom:14px;">
-        <span class="notice-icon">💜</span>
-        <div><strong>Who needs this?</strong> Only the person doing the swap when Wendy is asleep. If Wendy always does it, skip this section entirely!</div>
-      </div>
-      <p style="margin-bottom:14px;">The easiest way is through the <strong>Microsoft Store</strong> — no confusing websites! 🌸</p>
-      <div class="step"><div class="step-num">1</div><div class="step-content"><p>Press the <kbd>Windows</kbd> key, type <strong>Microsoft Store</strong>, and open it.</p></div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-content"><p>Search for <strong>Python Install Manager</strong> in the search bar at the top.</p></div></div>
-      <div class="step"><div class="step-num">3</div><div class="step-content"><p>Click the result made by <strong>Python Software Foundation</strong>. It is free — if it asks for money, it's the wrong one! 🚨</p></div></div>
-      <div class="step"><div class="step-num">4</div><div class="step-content"><p>Click <strong>Get</strong>, wait for it to finish, then click <strong>Open</strong>.</p></div></div>
-      <div class="step"><div class="step-num">5</div><div class="step-content"><p>A window pops up with setup questions. For each one, type <kbd>y</kbd> and press <kbd>Enter</kbd>. It's safe to say yes to everything!</p></div></div>
-      <div class="step"><div class="step-num">6</div><div class="step-content"><p>When it shows a big list of commands, type <kbd>n</kbd> and press <kbd>Enter</kbd>, then close the window.</p></div></div>
-      <div class="step"><div class="step-num">7</div><div class="step-content"><p><strong>Restart your computer!</strong> Python won't work properly until you do. 💜</p></div></div>
-      <div class="tip">✨ You only ever need to do this once! After restarting, <code>run_host_swap.bat</code> will work whenever you need it.</div>
-    </div>
-  </div>
-
   <div class="deco">🌸 🌷 💜 🌷 🌸</div>
+  
   <div class="footer">
     <span class="footer-deco">✦ ✦ ✦ ✦ ✦</span>
     <span>made with love for catnobboptob farm 🎀</span>
+    <span>A big thank you to Glen for making this possible!! 💜</span>
   </div>
+
 
 </div>
 </body>
